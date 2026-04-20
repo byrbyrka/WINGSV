@@ -7,10 +7,15 @@
     android:paddingEnd="24dp"
     android:paddingBottom="24dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <TextView
             android:id="@+id/text_vk_turn_title"
@@ -47,15 +52,14 @@
             android:textColor="#EAF9FBFF"
             android:textSize="17sp" />
 
-        <ScrollView
+        <LinearLayout
             android:id="@+id/scroll_vk_turn_fields"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="22dp"
             android:layout_weight="1"
             android:clipToPadding="false"
-            android:fillViewport="false"
-            android:overScrollMode="ifContentScrolls"
+            android:orientation="vertical"
             android:paddingTop="4dp"
             android:paddingBottom="12dp">
 
@@ -64,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
-        </ScrollView>
+        </LinearLayout>
 
         <Button
             android:id="@+id/button_import_wingsv"
@@ -87,5 +91,7 @@
             android:text="@string/continue_label"
             android:textColor="#FF010102"
             android:textStyle="bold" />
-    </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
 </FrameLayout>
